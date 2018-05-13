@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<title>ORE_DM_Tools</title>
+  
+	<link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+	<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h1>Launch game set-up</h1>
+  <div id="table" class="table-editable">
+    <table class="table">
+      <tr>
+        <th>Set name of game master</th>
+        <th contenteditable="true"><font color="#008800">Alexandre</font></th>
+      </tr>
+      <tr>
+        <th>Set name of campain</th>
+        <th contenteditable="true"><font color="#008800">WW I</font></th>
+      </tr>
+      <tr>
+        <th>
+          <button class="btn btn-primary" onclick="location.href='./SetUp'">Start set-up of game</button>
+        </th>
+        <th></th>
+      </tr>
+    </table>
+    <h5>
+    <br><br>
+    NOTE : 
+    <br><br>
+    Pay attention to write the exact name of the game master and campain. 
+    These parameters play the role of user name and password to retreve the game from
+    the database. Input is cap sensitive.
+    <br><br>
+    Only use letters, numbers, spaces, bashes (-), underscores (_) or dots (.)
+    <br><br>
+    Never use other special characters, please!
+    <br><br>
+    Enjoy!</h5>
+  </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js'></script>
+
+</body>
+
+</html>
