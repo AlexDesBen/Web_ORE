@@ -14,24 +14,31 @@ sudo systemctl restart apache2
 
 
 # Install php 7
+On RPi 3 the repos don't yet contain PhP7.0 so run
+`sudo apt-get -y install php5-common php5-cgi php5 libapache2-mod-php5`
+sudo a2enmod php5
+sudo service apache2 reload
+
+Else work with PhP 7.0
 sudo apt-get install php
 sudo apt-get install libapache2-mod-php7.0
 sudo a2enmod php7.0
 sudo service apache2 reload
 
 # Install mySQL
-sudo apt-get instal mysql-server
-sudo mysql -u root
+sudo apt-get install mysql-server
+sudo mysql -u root -p
 USE mysql;
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 SELECT User, Host, plugin FROM mysql.user;
+CREATE DATABASE ore;
+GRANT insert, create, select on ore.* to 'username'@'localhost';
 exit;
 
 mysql -u username -p
 
 # Useful mySQL command for noobs (like me)
 SHOW schemas;
-CREATE DATABASE ore;
 USE ore;
 
 SHOW tables;
